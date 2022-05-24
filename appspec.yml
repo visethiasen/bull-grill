@@ -1,25 +1,36 @@
 
 version: 0.0
 os: windows
+
 files:
-  - source: /
-    destination: /opt/test
+  - source: \
+    destination: C:\temp\WebApp\MusicWorld
+  
 hooks:
   BeforeInstall:
-    - location: scripts/install_dependencies.sh
-      timeout: 300
-      runas: root
-  AfterInstall:
-    - location: scripts/change_permissions.sh
-      timeout: 300
-      runas: root
-  ApplicationStart:
-    - location: scripts/start_server.sh
-    - location: scripts/create_test_db.sh
-      timeout: 300
-      runas: root
-  ApplicationStop:
-    - location: scripts/stop_server.sh
-      timeout: 300
-      runas: root
+    - location: scripts\StageArtifact.ps1
+    - location: scripts\CreateWebSite.ps1
+
+
+# files:
+#   - source: /
+#     destination: /opt/test
+# hooks:
+#   BeforeInstall:
+#     - location: scripts/install_dependencies.sh
+#       timeout: 300
+#       runas: root
+#   AfterInstall:
+#     - location: scripts/change_permissions.sh
+#       timeout: 300
+#       runas: root
+#   ApplicationStart:
+#     - location: scripts/start_server.sh
+#     - location: scripts/create_test_db.sh
+#       timeout: 300
+#       runas: root
+#   ApplicationStop:
+#     - location: scripts/stop_server.sh
+#       timeout: 300
+#       runas: root
 
