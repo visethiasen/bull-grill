@@ -3,7 +3,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /opt/datalogics/pdf-utility
+    destination: /opt/test
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh

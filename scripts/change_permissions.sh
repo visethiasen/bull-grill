@@ -1,11 +1,6 @@
 !/bin/bash
 
-chmod -R 755 /opt/datalogics/pdf-utility
-#chmod -R 755 /opt/datalogics/public
-chown centos:centos -R /opt/datalogics/pdf-utility
-#chown centos:centos -R /opt/datalogics/public
 
-# touch /opt/datalogics/Zapier-integration/testfile
 #chmod -R 777 /var/www/html/
 #cd /var/www
 

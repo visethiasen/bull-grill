@@ -17,13 +17,11 @@ phases:
       - npm build 
       - npm install request
       - echo Environment Files
-      - aws s3 cp s3://pdfcloud-pipeline/pdfcloud/env .
-      - mv env .env
+      # - aws s3 cp s3://olympic-pipeline/test.txt
 
   post_build:
     commands:
       - echo Build completed on `date`
-      - sed -i 's|YOUR_DOMAIN_HERE|https://pdfcloud-api-staging.datalogics.com|' config/settings.js
       - npm test 
 
 artifacts:

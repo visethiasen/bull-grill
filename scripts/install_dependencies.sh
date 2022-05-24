@@ -3,5 +3,4 @@
 #sudo rm -r /var/www/html
 #sudo mkdir /var/www/html
 
-sudo rm -r /opt/datalogics/pdf-utility
 # remove both commands and will modify to fit zapier api;
