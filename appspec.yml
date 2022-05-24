@@ -8,7 +8,7 @@ files:
   
 hooks:
   BeforeInstall:
-    - location: scripts\StageArtifact.ps1
+    # - location: scripts\StageArtifact.ps1
     - location: scripts\CreateWebSite.ps1
 
 
